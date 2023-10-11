@@ -299,7 +299,6 @@ public class DBManager {
             addRow(database.tables.size()-1,row);
             System.out.println(row.values);
         }
-        DBManagementSystem.getInstance().renderCells();
     }
 
 }

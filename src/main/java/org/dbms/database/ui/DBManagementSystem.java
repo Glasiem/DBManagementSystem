@@ -321,6 +321,7 @@ public class DBManagementSystem {
             if (selectedTab != -1 && intersectTable != -1) {
 
                 DBManager.getInstance().tablesIntersection(selectedTab, intersectTable);
+                DBManagementSystem.getInstance().renderCells();
                 JOptionPane.showMessageDialog(DBManagementSystem.instance.frame, "Intersection found!");
             }
         });
