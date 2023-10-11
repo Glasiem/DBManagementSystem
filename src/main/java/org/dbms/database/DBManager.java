@@ -228,13 +228,13 @@ public class DBManager {
                 table.setValueAt("", rowIndex, columnIndex);
             }
 
-            JFrame frame = new JFrame("Помилка!!!");
+            JFrame frame = new JFrame("Error!!!");
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
             JOptionPane.showMessageDialog(
                     frame,
-                    "Введено некоректне значення",
-                    "Помилка!!!",
+                    "Invalid value",
+                    "Error!!!",
                     JOptionPane.INFORMATION_MESSAGE
             );
         }
@@ -291,7 +291,6 @@ public class DBManager {
             }
             if (!flag) tempTable1.rows.remove(i);
         }
-        i = 0;
         addTable(tempTable1.name + " ^ " + tempTable2.name);
         for (Column column: tempTable1.columns) {
             addColumn(database.tables.size()-1,column.name, ColumnType.valueOf(column.type));
